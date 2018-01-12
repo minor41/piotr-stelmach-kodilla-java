@@ -22,18 +22,14 @@ public class TestingMain {
         // test klasy Kalkulator ->
         Calculator calculator = new Calculator();
 
-        int result2 = calculator.add(5,7);
-
-        int result3 = calculator.subtract(9,3);
-
-        if (calculator.equals(calculator)) {
-            System.out.println("result of adding equals: " + result2 + "\n");
+        if (calculator == calculator) {
+            System.out.println("result of adding equals: " + calculator.add(99, 1) + "\n");
         } else {
             System.out.println("calculator is not working");
         }
 
-        if (calculator.equals(calculator)){
-            System.out.println("result of subtracting equals: " + result3);
+        if (calculator == calculator){
+            System.out.println("result of subtracting equals: " + calculator.subtract(100,1));
         } else {
             System.out.println("calculator is not working");
         }
