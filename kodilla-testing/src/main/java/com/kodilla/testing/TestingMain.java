@@ -18,6 +18,8 @@ public class TestingMain {
         // tu umieść kolejny test ->
         System.out.println("Test - pierwszy test jednostkowy:" + "\n");
 
+
+        // test klasy Kalkulator ->
         Calculator calculator = new Calculator();
 
         int result2 = calculator.add(5,7);
