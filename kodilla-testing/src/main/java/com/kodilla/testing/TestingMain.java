@@ -33,9 +33,5 @@ public class TestingMain {
         } else {
             System.out.println("calculator is not working");
         }
-
-
-
-
     }
 }
