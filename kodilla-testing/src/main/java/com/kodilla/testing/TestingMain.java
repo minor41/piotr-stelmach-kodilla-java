@@ -22,8 +22,11 @@ public class TestingMain {
         // test klasy Kalkulator ->
         Calculator calculator = new Calculator();
 
-            System.out.println("result of adding equals: " + calculator.add(99, 1) + "\n");
+        int adding = calculator.add(99, 1);
+        int subtracting =calculator.subtract(100, 1);
 
-            System.out.println("result of subtracting equals: " + calculator.subtract(100,1));
+            System.out.println("result of adding equals: " + adding + "\n");
+
+            System.out.println("result of subtracting equals: " + subtracting);
         }
     }
