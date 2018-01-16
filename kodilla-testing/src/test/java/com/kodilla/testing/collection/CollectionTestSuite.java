@@ -1,4 +1,5 @@
 package com.kodilla.testing.collection;
+
 import com.kodilla.testing.collection.OddNumberExterminator;
 import org.junit.*;
 
@@ -20,9 +21,8 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorEmptyList() {
         OddNumberExterminator emptyList = new OddNumberExterminator();
-        emptyList.exterminate();
-        System.out.println("Testing " + number.size);
-        Assert.assertNull(null);
+        emptyList.exterminate(new ArrayList<>());
+
     }
     @Test
     public void testOddNumbersExterminatorNormalList(){
