@@ -32,10 +32,10 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorNormalList(){
 
-        List<Integer> result = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8));
-        OddNumberExterminator evenNumbers = new OddNumberExterminator();
-        List<Integer> onlyEvenNumbers = evenNumbers.exterminate(result);
-        Assert.assertEquals(Arrays.asList(2, 4, 6, 8), onlyEvenNumbers);
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8));
+        OddNumberExterminator onlyEvenNumbers = new OddNumberExterminator();
+        List<Integer> evenNumbers = onlyEvenNumbers.exterminate(numbers);
+        Assert.assertEquals(Arrays.asList(2, 4, 6, 8), evenNumbers);
 
 
     }
