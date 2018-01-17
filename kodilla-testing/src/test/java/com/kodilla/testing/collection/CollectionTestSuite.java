@@ -21,7 +21,8 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorEmptyList() {
         OddNumberExterminator emptyList = new OddNumberExterminator();
-        emptyList.exterminate(new ArrayList<>());
+        emptyList.exterminate(numbers);
+        Assert.assertEquals(0, numbers);
 
     }
     @Test
