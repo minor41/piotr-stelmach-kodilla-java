@@ -16,5 +16,11 @@ public class ShapeCollector {
 
     }
 
+    public void getFigute(int n){
 
+    }
+
+    public void showFigure(){
+
+    }
 }

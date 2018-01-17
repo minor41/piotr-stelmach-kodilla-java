@@ -2,19 +2,20 @@ package com.kodilla.testing.collection;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.Random;
 
 public class OddNumberExterminator {
 
+
     public List<Integer> exterminate(List<Integer> numbers) {
+
+     List<Integer> result = new ArrayList<>();
 
      for (Integer evenNumbers: numbers) {
          if ( evenNumbers % 2 == 0) {
-             numbers.add(evenNumbers);
+             result.add(evenNumbers);
          }
        }
-       return numbers;
+       return result;
     }
 
 }
