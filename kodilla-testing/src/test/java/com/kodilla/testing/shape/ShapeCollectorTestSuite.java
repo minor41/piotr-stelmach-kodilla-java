@@ -35,18 +35,14 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testAddFigure() {
         //Given
-        Circle circle = new Circle("circle", 5);
-        Square square = new Square("square", 5);
-        Triangle triangle = new Triangle("triangle", 3,5);
+        Shape circle = new Circle(5);
         ShapeCollector figures = new ShapeCollector();
 
         //When
         figures.addFigure(circle);
-        figures.addFigure(square);
-        figures.addFigure(triangle);
 
         //Then
-        Assert.assertEquals(1, figures.addFigure(circle));
+        Assert.assertEquals(1, figures.getFigure(1));
 
 
     }
@@ -54,38 +50,35 @@ public class ShapeCollectorTestSuite {
     public void testRemoveFigure(){
         //Given
         ShapeCollector figures = new ShapeCollector();
-        Circle circle = new Circle("circle", 5);
-        Square square = new Square("square", 5);
-        Triangle triangle = new Triangle("triangle", 3,5);
+        Shape circle = new Circle(5);
+        figures.addFigure(circle);
 
         //When
         boolean result = figures.removeFigure(circle);
-        boolean result2 = figures.removeFigure(square);
-        boolean result3 = figures.removeFigure(triangle);
 
         //Then
         Assert.assertTrue(result);
-        Assert.assertTrue(result2);
-        Assert.assertTrue(result3);
+
     }
     @Test
     public void testGetFigure(){
         //Given
         ShapeCollector figures = new ShapeCollector();
-        Shape circle = new Circle("circle", + 5);
+        Shape circle = new Circle(5);
+        figures.addFigure(circle);
 
         //When
-        Shape result = figures.getFigure(1);
+        Shape try1 = figures.getFigure(0);
 
         //Then
-        Assert.assertEquals(circle, result);
+        Assert.assertEquals(circle, try1);
     }
 
     @Test
     public void testShowFigure(){
         //Given
         ShapeCollector figures = new ShapeCollector();
-        Shape square = new Square("square", 5);
+        Shape square = new Square(5);
 
         //When
         figures.showFigure();

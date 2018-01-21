@@ -1,12 +1,10 @@
 package com.kodilla.testing.shape;
 
 public class Triangle implements Shape{
-    String triangle;
     int a;
     int h;
 
-    public Triangle(String triangle, int a, int h) {
-        this.triangle = triangle;
+    public Triangle(int a, int h) {
         this.a = a;
         this.h = h;
     }
