@@ -35,11 +35,13 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testAddFigure() {
         //Given
-        Shape circle = new Circle(5);
         ShapeCollector figures = new ShapeCollector();
+        List<Shape> shapes = new ArrayList<>();
+        Shape circle = new Circle(5);
+        shapes.add(circle);
 
         //When
-         figures.addFigure(circle);
+        figures.addFigure(circle);
 
         //Then
         Assert.assertEquals(1, figures.getFigure(1));
@@ -81,10 +83,10 @@ public class ShapeCollectorTestSuite {
         Shape square = new Square(5);
 
         //When
-       // Shape field = figures.showFigure();
+        figures.showFigure();
 
         //Then
-      //  Assert.assertEquals(square, field);
+        Assert.assertEquals(square, figures.showFigure());
 
 
     }
