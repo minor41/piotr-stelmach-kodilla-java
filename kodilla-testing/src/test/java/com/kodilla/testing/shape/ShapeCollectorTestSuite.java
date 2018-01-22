@@ -44,7 +44,7 @@ public class ShapeCollectorTestSuite {
         figures.addFigure(circle);
 
         //Then
-        Assert.assertEquals(1, figures.getFigure(1));
+        Assert.assertEquals(0, figures.addFigure(circle));
 
 
     }

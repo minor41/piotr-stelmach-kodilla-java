@@ -5,9 +5,13 @@ import java.util.List;
 
 public class ShapeCollector {
     private List<Shape> shapes = new ArrayList<>();
+    int listOfShapes;
+    String figuresName;
 
-    public void addFigure(Shape shape) {
-        shapes.add(shape);
+    public int addFigure(Shape shape) {
+        listOfShapes = shapes.size();
+
+        return listOfShapes;
     }
 
     public boolean removeFigure(Shape shape) {
@@ -27,10 +31,10 @@ public class ShapeCollector {
            return figureCount;
     }
 
-    public double showFigure(){
+    public Shape showFigure(){
 
-        Shape square = new Circle(4);
+        Shape square = new Square(4);
 
-        return square.getField();
+        return square;
     }
 }
