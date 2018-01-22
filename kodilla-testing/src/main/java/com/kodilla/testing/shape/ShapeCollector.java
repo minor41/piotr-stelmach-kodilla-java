@@ -7,8 +7,7 @@ public class ShapeCollector {
     private List<Shape> shapes = new ArrayList<>();
 
     public void addFigure(Shape shape) {
-        Shape circle = new Circle(5);
-        shapes.add(circle);
+        shapes.add(shape);
     }
 
     public boolean removeFigure(Shape shape) {
@@ -28,7 +27,10 @@ public class ShapeCollector {
            return figureCount;
     }
 
-    public Shape showFigure(){
-        return null;
+    public double showFigure(){
+
+        Shape square = new Circle(4);
+
+        return square.getField();
     }
 }

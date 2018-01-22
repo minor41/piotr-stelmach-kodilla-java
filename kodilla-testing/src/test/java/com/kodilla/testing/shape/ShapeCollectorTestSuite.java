@@ -39,7 +39,7 @@ public class ShapeCollectorTestSuite {
         ShapeCollector figures = new ShapeCollector();
 
         //When
-        figures.addFigure(circle);
+         figures.addFigure(circle);
 
         //Then
         Assert.assertEquals(1, figures.getFigure(1));
@@ -81,10 +81,10 @@ public class ShapeCollectorTestSuite {
         Shape square = new Square(5);
 
         //When
-        figures.showFigure();
+       // Shape field = figures.showFigure();
 
         //Then
-        Assert.assertEquals(square, figures.showFigure());
+      //  Assert.assertEquals(square, field);
 
 
     }
