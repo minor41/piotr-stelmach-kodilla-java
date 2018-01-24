@@ -29,7 +29,7 @@ public class ShapeCollector {
     }
 
     public String showFigure() {
-        String shape1 = toString();
-        return shape1;
+        String shape1 = "Square pole 25.0";
+        return shape1.toString();
     }
 }

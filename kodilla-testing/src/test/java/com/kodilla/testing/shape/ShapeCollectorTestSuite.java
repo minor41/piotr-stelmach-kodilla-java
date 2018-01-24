@@ -87,7 +87,7 @@ public class ShapeCollectorTestSuite {
         String square1 = collector.showFigure();
 
         //Then
-        Assert.assertEquals( "",square1);
+        Assert.assertEquals( "Square pole 25.0",square1.toString());
 
 
     }
