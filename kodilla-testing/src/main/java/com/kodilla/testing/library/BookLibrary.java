@@ -8,7 +8,7 @@ import java.util.Map;
 import static com.sun.tools.internal.xjc.reader.Ring.add;
 
 public class BookLibrary {
-    LibraryDatabase libraryDatabase;
+    private LibraryDatabase libraryDatabase;
 
     public BookLibrary(LibraryDatabase libraryDatabase) {
         this.libraryDatabase = libraryDatabase;
@@ -26,22 +26,7 @@ public class BookLibrary {
     }
 
     public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
-
-        List<Book> bookList1 = new ArrayList<>();
-        for (int n = 0; n < 5; n++) {
-            if (bookList1.size() == 0){
-                return bookList1;
-            } else {
-                if (bookList1.size() ==1) {
-                    return bookList1;
-                } else {
-                    if (bookList1.size() ==5) {
-                        return bookList1;
-                    }
-                }
-            }
-        }
-        return bookList1;
+        return libraryDatabase.listBooksInHandsOf(libraryUser);
     }
 }
 

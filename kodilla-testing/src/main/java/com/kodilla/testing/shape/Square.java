@@ -10,7 +10,7 @@ public class Square implements Shape{
 
     @Override
     public String getShapeName() {
-        return "square";
+        return "Square";
 
     }
 
@@ -19,5 +19,10 @@ public class Square implements Shape{
 
        return a * a;
 
+    }
+
+    @Override
+    public String toString() {
+        return getShapeName() + " pole " + getField();
     }
 }
