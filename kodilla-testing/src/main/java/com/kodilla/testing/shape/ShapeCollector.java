@@ -31,8 +31,7 @@ public class ShapeCollector {
     }
 
     public String showFigure() {
-
-        String result = "square";
-        return result;
+        String shape1 = "square";
+        return shape1;
     }
 }
