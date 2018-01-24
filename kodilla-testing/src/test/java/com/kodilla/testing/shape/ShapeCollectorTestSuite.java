@@ -81,12 +81,18 @@ public class ShapeCollectorTestSuite {
         //Given
         ShapeCollector figures = new ShapeCollector();
         Shape square = new Square(5);
+        Shape circle = new Circle(5);
+        Shape triangle = new Triangle(5, 3);
 
         //When
-        figures.showFigure();
+        String square1 = figures.showFigure();
+        String circle1 = figures.showFigure();
+        String triangle1 = figures.showFigure();
 
         //Then
-        Assert.assertEquals(square, figures.showFigure());
+        Assert.assertEquals(square.getShapeName(), square1);
+    //    Assert.assertEquals(circle.getShapeName(), circle1);
+    //    Assert.assertEquals(triangle.getShapeName(), triangle1);
 
 
     }

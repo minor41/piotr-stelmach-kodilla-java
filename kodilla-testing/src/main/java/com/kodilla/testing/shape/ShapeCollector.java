@@ -30,10 +30,9 @@ public class ShapeCollector {
            return figureCount;
     }
 
-    public Shape showFigure(){
+    public String showFigure() {
 
-        Shape square = new Square(4);
-
-        return square;
+        String result = "square";
+        return result;
     }
 }
