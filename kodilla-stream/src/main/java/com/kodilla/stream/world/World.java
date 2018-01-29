@@ -10,7 +10,7 @@ public class World {
     public BigDecimal getPeopleQuantity(){
          BigDecimal totalPeople = listOfContinents.stream()
                 .flatMap(continent -> continent.getListOfCountries().stream())
-                .reduce(BigDecimal.ZERO, (Country sum, Country current) -> sum = sum.getPeopleQuantity());
+                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add());
 
          return totalPeople;
     }

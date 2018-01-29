@@ -19,7 +19,6 @@ public class ForumUser {
         this.sex = sex;
         this.birthDate = LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth);
         this.numberOfPosts = numberOfPosts;
-        this.yearOfBirth = yearOfBirth;
     }
 
     public int getUserId() {
@@ -40,10 +39,6 @@ public class ForumUser {
 
     public int getNumberOfPosts() {
         return numberOfPosts;
-    }
-
-    public int getYear(){
-        return yearOfBirth;
     }
 
 
