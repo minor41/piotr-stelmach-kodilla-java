@@ -3,22 +3,22 @@ package com.kodilla.stream.world;
 import java.math.BigDecimal;
 
 public class Country {
-    private final String nameOftheCountry;
+    private final String nameOfTheCountry;
     private final BigDecimal numberOfPeopleInTheCountry;
 
     public Country(final String nameOftheCountry,final BigDecimal numberOfPeopleInTheCountry){
-        this.nameOftheCountry = nameOftheCountry;
+        this.nameOfTheCountry = nameOftheCountry;
         this.numberOfPeopleInTheCountry = numberOfPeopleInTheCountry;
     }
 
     public String getNameOftheCountry(){
-        return nameOftheCountry;
+        return nameOfTheCountry;
     }
 
     @Override
     public String toString() {
         return "Country{" +
-                "nameOftheCountry='" + nameOftheCountry + '\'' +
+                "nameOftheCountry='" + nameOfTheCountry + '\'' +
                 ", numberOfPeopleInTheCountry=" + numberOfPeopleInTheCountry +
                 '}';
     }
