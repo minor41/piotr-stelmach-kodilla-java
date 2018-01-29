@@ -61,6 +61,7 @@ public final class ForumUser {
     public int hashCode() {
         return Objects.hash(username);
     }
+
     public Set<String> getLocationsOfFriends() {
         return friends.stream()
                 .map(friend -> friend.getLocation())
