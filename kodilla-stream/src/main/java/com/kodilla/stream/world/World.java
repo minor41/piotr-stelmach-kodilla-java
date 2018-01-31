@@ -5,12 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class World {
-    List<Continent> listOfContinents = new ArrayList<>();
+    private final List<Continent> listOfContinents = new ArrayList<>();
 
     public BigDecimal getPeopleQuantity(){
          BigDecimal totalPeople = listOfContinents.stream()
                 .flatMap(continent -> continent.getListOfCountries().stream())
-                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add());
+                 .map(country -> country.getPeopleQuantity())
+                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
 
          return totalPeople;
     }

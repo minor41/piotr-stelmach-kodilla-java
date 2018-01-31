@@ -8,6 +8,11 @@ public class Forum {
 
 
     public List<ForumUser> getUserList() {
-        return userList;
+        return new ArrayList<>(userList);
     }
+
+    public void addUsers(ForumUser forumUsers){
+        this.userList.add(forumUsers);
+    }
+
 }

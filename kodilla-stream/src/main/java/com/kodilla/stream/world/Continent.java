@@ -1,6 +1,5 @@
 package com.kodilla.stream.world;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +12,6 @@ public class Continent {
     }
 
     public List<Country> getListOfCountries(){
-        return  listOfCountries;
+        return  new ArrayList<>(listOfCountries);
     }
 }

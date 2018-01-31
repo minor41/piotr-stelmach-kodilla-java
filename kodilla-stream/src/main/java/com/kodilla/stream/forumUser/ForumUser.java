@@ -8,7 +8,6 @@ public class ForumUser {
     private final String userName;
     private final char sex;
     private final LocalDate birthDate;
-    private final int yearOfBirth;
     private final int numberOfPosts;
 
 

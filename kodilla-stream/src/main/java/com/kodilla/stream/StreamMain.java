@@ -1,6 +1,7 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.forumUser.Forum;
 import com.kodilla.stream.forumUser.ForumUser;
 
 import java.time.LocalDate;
@@ -36,9 +37,12 @@ public class StreamMain {
         userList.add(new ForumUser(006, "Emma Potus", 'F', 1995, 7,29,
                     68));
 
-        Map<Integer, ForumUser> mapOfUsers = userList.stream()
+        Forum forum = new Forum();
+        forum.addUsers((ForumUser) userList);
+
+        Map<Integer, Forum> mapOfUsers = forum.getUserList().stream()
                 .filter(forumUser -> forumUser.getSex() == 'M')
-                .filter (forumUser->forumUser.getBirthDate().isBefore(LocalDate.of(1998,12,31)))
+                .filter (forumUser->forumUser.getBirthDate().plusYears(20).isBefore(LocalDate.now()))
                 .filter(forumUser -> forumUser.getNumberOfPosts() >= 1)
                 .collect(Collectors.toMap(ForumUser::getUserId, forumUser -> forumUser));
 
