@@ -6,7 +6,6 @@ import java.util.List;
 public class Forum {
     private final List<ForumUser> userList = new ArrayList<>();
 
-
     public List<ForumUser> getUserList() {
         return new ArrayList<>(userList);
     }

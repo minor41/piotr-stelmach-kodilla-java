@@ -34,8 +34,8 @@ public class PeopleInTheWorldTestSuite {
 
 
         World world = new World();
-        world.add(europe);
-        world.add(asia);
+        world.addContinent(europe);
+        world.addContinent(asia);
         BigDecimal numberOfPeople = world.getPeopleQuantity();
 
 
