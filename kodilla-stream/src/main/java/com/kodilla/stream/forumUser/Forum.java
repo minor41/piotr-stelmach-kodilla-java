@@ -11,8 +11,8 @@ public class Forum {
         return new ArrayList<>(userList);
     }
 
-    public void addUsers(ForumUser forumUsers){
-        this.userList.add(forumUsers);
+    public void addUsers(ForumUser user){
+        this.userList.add(user);
     }
 
 }

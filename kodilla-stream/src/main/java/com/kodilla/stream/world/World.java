@@ -15,4 +15,8 @@ public class World {
 
          return totalPeople;
     }
+
+    public void add(Continent continent) {
+        this.listOfContinents.add(continent);
+    }
 }

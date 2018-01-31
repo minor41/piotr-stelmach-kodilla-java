@@ -5,6 +5,7 @@ import com.kodilla.stream.forumUser.Forum;
 import com.kodilla.stream.forumUser.ForumUser;
 
 import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -37,19 +38,19 @@ public class StreamMain {
         userList.add(new ForumUser(006, "Emma Potus", 'F', 1995, 7,29,
                     68));
 
-        Forum forum = new Forum();
-        forum.addUsers((ForumUser) userList);
-
-        Map<Integer, Forum> mapOfUsers = forum.getUserList().stream()
-                .filter(forumUser -> forumUser.getSex() == 'M')
-                .filter (forumUser->forumUser.getBirthDate().plusYears(20).isBefore(LocalDate.now()))
-                .filter(forumUser -> forumUser.getNumberOfPosts() >= 1)
-                .collect(Collectors.toMap(ForumUser::getUserId, forumUser -> forumUser));
-
-        System.out.println("# elements: " + mapOfUsers.size());
-        mapOfUsers.entrySet().stream()
-                .map(entry -> entry.getKey() + ": " + entry.getValue())
-                .forEach(System.out::println);
-
+    //    Forum forum = new Forum();
+    //    forum.addUsers((ForumUser) userList);
+    //
+    //   Map<Integer, Forum> mapOfUsers = forum.getUserList().stream()
+    //           .filter(forumUser -> forumUser.getSex() == 'M')
+    //           .filter (forumUser-> forumUser.getBirthDate().plusYears(20).isBefore(LocalDate.now()))
+    //           .filter(forumUser -> forumUser.getNumberOfPosts() >= 1)
+    //           .collect(Collectors.toMap(ForumUser::getUserId, forumUser -> forumUser));
+    //
+    //  System.out.println("# elements: " + mapOfUsers.size());
+    //  mapOfUsers.entrySet().stream()
+    //          .map(entry -> entry.getKey() + ": " + entry.getValue())
+    //          .forEach(System.out::println);
+    //
     }
 }
