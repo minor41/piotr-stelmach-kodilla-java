@@ -148,7 +148,7 @@ public class BoardTestSuite {
                 .flatMap(taskList -> taskList.getTasks().stream())
                 .map(n -> n.getCreated())
                 .filter(d -> d.compareTo(LocalDate.now()) <= 0)
-                .mapToLong(d -> d.until(LocalDate.now(), ChronoUnit.DAYS))
+                .mapToDouble(d -> d.until(LocalDate.now(), ChronoUnit.DAYS))
                 .average()
                 .orElse(Double.NaN);
 
