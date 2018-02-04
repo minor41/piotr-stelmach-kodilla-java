@@ -7,11 +7,11 @@ public class TestingMain {
     public static void main(String[] args){
 
 
-        // tu umieść kolejny test ->
-        System.out.println("Test - pierwszy test jednostkowy:" + "\n");
+        // tu umieść kolejny test2 ->
+        System.out.println("Test - pierwszy test2 jednostkowy:" + "\n");
 
 
-        // test klasy Kalkulator ->
+        // test2 klasy Kalkulator ->
         Calculator calculator = new Calculator();
 
         int adding = calculator.add(99, 1);
