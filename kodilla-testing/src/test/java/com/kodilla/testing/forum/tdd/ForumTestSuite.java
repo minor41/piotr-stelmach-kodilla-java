@@ -21,7 +21,7 @@ public class ForumTestSuite {
     @Before
     public void beforeEveryTest() {
         testCounter++;
-        System.out.println("Preparing to execute test2 #" + testCounter);
+        System.out.println("Preparing to execute test #" + testCounter);
     }
 
     @Test

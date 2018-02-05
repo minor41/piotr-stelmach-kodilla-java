@@ -1,4 +1,5 @@
-package com.kodilla.exception.test2;
+package com.kodilla.exception.test;
+
 
 public class ExceptionHandling extends SecondChallenge{
 
