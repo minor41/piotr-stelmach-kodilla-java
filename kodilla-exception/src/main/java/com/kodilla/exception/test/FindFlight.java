@@ -27,18 +27,18 @@ class Test{
 
     public static void main(String args[]) {
 
-        FindFlight lookForFlight = new FindFlight();
-
-        try {
-            lookForFlight.findFlight();
-
-        } catch (RouteNotFoundException e) {
-
-            System.out.println("Route not found");
-
-        }finally {
-
-            System.out.println("Thank you for using our service");
-        }
+   //    FindFlight lookForFlight = new FindFlight();
+   //
+   //    try {
+   //        lookForFlight.findFlight();
+   //
+   //    } catch (RouteNotFoundException e) {
+   //
+   //        System.out.println("Route not found");
+   //
+   //    }finally {
+   //
+   //        System.out.println("Thank you for using our service");
+   //    }
     }
 }
