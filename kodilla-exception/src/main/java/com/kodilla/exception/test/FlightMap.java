@@ -22,15 +22,15 @@ public class FlightMap {
 
     public Boolean findFlight(String departure, String arrival) throws RouteNotFoundException{
 
-        List<String> flightsFromDepartureAirport = (List<String>) this.flightMap;
+        List <String> flightsFromDepartureAirport = flightMap.get(departure);
 
-        if (flightsFromDepartureAirport != null || flightsFromDepartureAirport.contains(arrival)){
-            return true;
+        if (flightsFromDepartureAirport != null || flightsFromDepartureAirport.equals(departure)) {
+            return flightsFromDepartureAirport.equals(departure);
         }
         if (flightsFromDepartureAirport.contains(arrival)){
             return false;
         }
-  
+
         for(String flight : flightsFromDepartureAirport){
             if (findFlight(flight, arrival)) {
                 return true;
