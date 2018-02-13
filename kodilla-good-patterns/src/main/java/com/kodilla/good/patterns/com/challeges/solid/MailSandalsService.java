@@ -1,10 +1,10 @@
-package com.kodilla.good.patterns.com.challeges;
+package com.kodilla.good.patterns.com.challeges.solid;
 
-public class MailGameService implements InformationService{
+public class MailSandalsService implements InformationService{
 
     private String emailAddress;
 
-    public MailGameService(String emailAddress) {
+    public MailSandalsService(String emailAddress) {
         this.emailAddress = emailAddress;
     }
 

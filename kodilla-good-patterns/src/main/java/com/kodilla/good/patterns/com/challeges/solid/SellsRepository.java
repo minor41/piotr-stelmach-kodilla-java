@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.com.challeges;
+package com.kodilla.good.patterns.com.challeges.solid;
 
 import java.time.LocalDate;
 

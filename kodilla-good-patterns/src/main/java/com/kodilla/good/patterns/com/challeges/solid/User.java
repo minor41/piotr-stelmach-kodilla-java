@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.com.challeges;
+package com.kodilla.good.patterns.com.challeges.solid;
 
 public class User {
 
