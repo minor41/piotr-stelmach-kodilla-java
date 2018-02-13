@@ -24,7 +24,7 @@ public class FlightMap {
 
         List <String> flightsFromDepartureAirport = flightMap.get(departure);
 
-        if (flightsFromDepartureAirport != null || flightsFromDepartureAirport.equals(arrival)) {
+        if (flightsFromDepartureAirport != null || flightsFromDepartureAirport.equals(departure)) {
             return flightsFromDepartureAirport.equals(departure);
         }
         if (flightsFromDepartureAirport.contains(arrival)){
