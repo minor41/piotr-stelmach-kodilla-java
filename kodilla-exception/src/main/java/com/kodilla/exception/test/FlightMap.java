@@ -24,11 +24,11 @@ public class FlightMap {
 
         List <String> flightsFromDepartureAirport = flightMap.get(departure);
 
-        if (flightsFromDepartureAirport != null || flightsFromDepartureAirport.equals(departure)) {
+        if (flightsFromDepartureAirport != null || flightsFromDepartureAirport.equals(arrival)) {
             return flightsFromDepartureAirport.equals(departure);
         }
         if (flightsFromDepartureAirport.contains(arrival)){
-            return false;
+            return true;
         }
 
         for(String flight : flightsFromDepartureAirport){
