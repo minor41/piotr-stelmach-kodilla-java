@@ -7,18 +7,18 @@ public class Application2 {
         BuyerInfoRetriever buyerInfoRetriever = new BuyerInfoRetriever();
         BuyerInfo buyerInfo = buyerInfoRetriever.retrieve();
 
-        ProductOrderService productOrderService = new ProductOrderService( new MailGameService(" J.Kane@o9.de "),
-                new GamesSellsService("Game 1", 1),
-                new GameSellsRepository("Game 1", 1));
+        ProductOrderService productOrderService = new ProductOrderService( new MailGameService(),
+                new GamesSellsService(),
+                new GameSellsRepository());
 
         productOrderService.process(buyerInfo);
 
       BuyerInfoRetriever buyerInfoRetriever1 = new BuyerInfoRetriever();
       BuyerInfo buyerInfo1 = buyerInfoRetriever1.retrieve1();
 
-      ProductOrderService productOrderService1 = new ProductOrderService(new MailSandalsService("p.doe@o2.com"),
-              new SandalsSellsService("Crocs", 49),
-              new SandalsSallesRepository("Crocs", 49));
+      ProductOrderService productOrderService1 = new ProductOrderService(new MailSandalsService(),
+              new SandalsSellsService(),
+              new SandalsSallesRepository());
 
       productOrderService1.process(buyerInfo1);
     }

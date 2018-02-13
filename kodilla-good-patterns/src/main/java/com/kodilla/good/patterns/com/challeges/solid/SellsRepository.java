@@ -4,6 +4,6 @@ import java.time.LocalDate;
 
 public interface SellsRepository {
 
-    boolean createSells(User user, LocalDate whenSold,
+    boolean createSells(User user, String nameOfProduct, int quantity, LocalDate whenSold,
                         LocalDate whenGotMoney, LocalDate whenShipped);
 }

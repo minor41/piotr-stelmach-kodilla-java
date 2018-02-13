@@ -14,11 +14,13 @@ public class ProductOrderService {
     }
 
     public SellsDTO process(final BuyerInfo buyerInfo) {
-        boolean isSold = sellsService.createSells(buyerInfo.getUser(), buyerInfo.getWhenSold(), buyerInfo.getWhenGotMoney(),
+        boolean isSold = sellsService.createSells(buyerInfo.getUser(), buyerInfo.getNameOfProduct(),
+                buyerInfo.getQuantity(), buyerInfo.getWhenSold(), buyerInfo.getWhenGotMoney(),
                 buyerInfo.getWhenShipped());
         if(isSold){
             informationService.inform(buyerInfo.getUser());
-            sellsRepository.createSells(buyerInfo.getUser(), buyerInfo.getWhenSold(), buyerInfo.getWhenGotMoney(),
+            sellsRepository.createSells(buyerInfo.getUser(), buyerInfo.getNameOfProduct(),
+                    buyerInfo.getQuantity(), buyerInfo.getWhenSold(), buyerInfo.getWhenGotMoney(),
                     buyerInfo.getWhenShipped());
             return new SellsDTO(buyerInfo.getUser(), true);
         } else {
