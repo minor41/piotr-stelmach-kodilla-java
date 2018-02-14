@@ -4,5 +4,5 @@ import java.util.Map;
 
 public interface OrderService {
 
-    boolean createOrder(FoodProducer producer, Map<String, Integer> orderedItems);
+    boolean createOrder(FoodProducer producer, Map<String, Integer> orderedItems, NumberOfOrder numberOfOrder);
 }

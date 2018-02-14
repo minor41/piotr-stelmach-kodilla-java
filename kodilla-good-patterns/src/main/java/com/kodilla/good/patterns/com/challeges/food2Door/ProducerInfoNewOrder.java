@@ -13,7 +13,9 @@ public class ProducerInfoNewOrder {
         orderedItem.put("carrots ", 10);
         orderedItem.put("onions ", 20);
 
-        return new ProducerInfo(producer, orderedItem);
+        final NumberOfOrder numberOfOrder = new NumberOfOrder(1);
+
+        return new ProducerInfo(producer, orderedItem, numberOfOrder);
     }
 
     public ProducerInfo newOrder2() {
@@ -24,7 +26,9 @@ public class ProducerInfoNewOrder {
         orderedItem.put("tomatoes ", 17);
         orderedItem.put("potatoes ", 20);
 
-        return new ProducerInfo(producer, orderedItem);
+        final NumberOfOrder numberOfOrder = new NumberOfOrder(1);
+
+        return new ProducerInfo(producer, orderedItem, numberOfOrder);
     }
 
     public ProducerInfo newOrder3(){
@@ -35,7 +39,10 @@ public class ProducerInfoNewOrder {
         orderedItem.put("oranges ", 25);
         orderedItem.put("bananas ", 50);
 
-        return new ProducerInfo(producer, orderedItem);
+        final NumberOfOrder numberOfOrder = new NumberOfOrder(1);
+
+
+        return new ProducerInfo(producer, orderedItem, numberOfOrder);
 
     }
 }

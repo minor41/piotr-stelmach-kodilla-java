@@ -1,9 +1,8 @@
 package com.kodilla.good.patterns.com.challeges.food2Door;
 
 public class OrderDTO {
-
-    public FoodProducer producer;
-    public boolean newOrderPlaced;
+    private FoodProducer producer;
+    private boolean newOrderPlaced;
 
     public OrderDTO(final FoodProducer producer, final boolean newOrderPlaced) {
         this.producer = producer;
