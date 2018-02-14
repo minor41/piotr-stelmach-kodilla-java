@@ -2,9 +2,9 @@ package com.kodilla.good.patterns.com.challeges.food2Door;
 
 public class FoodProducer {
 
-    private String producer;
+    private final String producer;
 
-    public FoodProducer(String producer) {
+    public FoodProducer(final String producer) {
         this.producer = producer;
     }
 

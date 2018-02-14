@@ -5,7 +5,7 @@ public class OrderDTO {
     public FoodProducer producer;
     public boolean newOrderPlaced;
 
-    public OrderDTO(FoodProducer producer, boolean newOrderPlaced) {
+    public OrderDTO(final FoodProducer producer, final boolean newOrderPlaced) {
         this.producer = producer;
         this.newOrderPlaced = newOrderPlaced;
     }
