@@ -20,25 +20,23 @@ public class FlightMap {
     }
 
 
-    public Boolean findFlight(String departure, String arrival) throws RouteNotFoundException{
+    public Boolean findFlightInternal(String departure, String arrival) throws RouteNotFoundException{
 
         List <String> flightsFromDepartureAirport = flightMap.get(departure);
 
-        if (flightsFromDepartureAirport != null || flightsFromDepartureAirport.equals(departure)) {
-            return flightsFromDepartureAirport.equals(departure);
+        if (flightsFromDepartureAirport == null || flightsFromDepartureAirport.contains(departure)) {
+            return new ArrayList<String>().contains(departure);
         }
         if (flightsFromDepartureAirport.contains(arrival)){
             return true;
         }
 
         for(String flight : flightsFromDepartureAirport){
-            if (findFlight(flight, arrival)) {
+            if (findFlightInternal(flight, arrival)) {
                 return true;
             }
         }
-  
         throw new RouteNotFoundException();
-  
     }
 }
 
@@ -53,15 +51,16 @@ class Test {
         flightMap.addNewFlight(new Flight("London", "New York"));
         flightMap.addNewFlight(new Flight("New York", "Chicago"));
 
-        try {
+            try {
 
-            final boolean flight = flightMap.findFlight("Warsaw", "Chicago");
-            System.out.println("Flight: " + flight);
+                final boolean flight = flightMap.findFlightInternal("Warsaw", "Chicago");
+                System.out.println("Flight: " + flight);
 
-        } catch (RouteNotFoundException e) {
-            System.out.println("Can't find flight from Warsaw to Chicago");
-        }finally {
-            System.out.println("Thank you for using our service");
-        }
+            } catch (RouteNotFoundException e) {
+                System.out.println("Can't find flight from Warsaw to Chicago");
+            }finally {
+                System.out.println("Thank you for using our service");
+            }
+         }
+
     }
-}
