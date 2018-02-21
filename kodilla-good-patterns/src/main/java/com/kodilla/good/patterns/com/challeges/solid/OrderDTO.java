@@ -2,10 +2,10 @@ package com.kodilla.good.patterns.com.challeges.solid;
 
 public class OrderDTO {
     public BuyerInfo buyerInfo;
-    public boolean ifSold;
+    public boolean sold;
 
-    public OrderDTO(BuyerInfo buyerInfo, boolean isSold) {
+    public OrderDTO(BuyerInfo buyerInfo, boolean sold) {
         this.buyerInfo = buyerInfo;
-        this.ifSold = isSold;
+        this.sold = sold;
     }
 }

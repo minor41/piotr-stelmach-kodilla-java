@@ -14,8 +14,8 @@ public class ProductOrderService {
     }
 
     public OrderDTO process(final BuyerInfo buyerInfo) {
-        boolean ifSold = sellsService.createSells(buyerInfo);
-        if(ifSold){
+        boolean sold = sellsService.createSells(buyerInfo);
+        if(sold){
             informationService.inform(buyerInfo);
             sellsRepository.createOrderRepository(buyerInfo);
             return new OrderDTO(buyerInfo, true);
