@@ -4,17 +4,19 @@ import java.time.LocalDate;
 
 public class BuyerInfo {
 
-    public User user;
-    public String nameOfProduct;
-    public int quantity;
-    public LocalDate whenSold;
-    public LocalDate whenGotMoney;
-    public LocalDate whenShipped;
+    private String firstName;
+    private String lastName;
+    private String nameOfProduct;
+    private int quantity;
+    private LocalDate whenSold;
+    private LocalDate whenGotMoney;
+    private LocalDate whenShipped;
 
-    public BuyerInfo(final User user, final String nameOfProduct, final int quantity,
+    public BuyerInfo(final String firstName,final String lastName, final String nameOfProduct, final int quantity,
                      final LocalDate whenSold, final LocalDate whenGotMoney,
                      final LocalDate whenShipped) {
-        this.user = user;
+        this.firstName = firstName;
+        this.lastName =lastName;
         this.nameOfProduct = nameOfProduct;
         this.quantity = quantity;
         this.whenSold = whenSold;
@@ -22,8 +24,12 @@ public class BuyerInfo {
         this.whenShipped = whenShipped;
     }
 
-    public User getUser() {
-        return user;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public String getNameOfProduct() {

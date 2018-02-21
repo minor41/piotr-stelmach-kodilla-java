@@ -13,18 +13,14 @@ public class ProductOrderService {
         this.sellsRepository = sellsRepository;
     }
 
-    public SellsDTO process(final BuyerInfo buyerInfo) {
-        boolean isSold = sellsService.createSells(buyerInfo.getUser(), buyerInfo.getNameOfProduct(),
-                buyerInfo.getQuantity(), buyerInfo.getWhenSold(), buyerInfo.getWhenGotMoney(),
-                buyerInfo.getWhenShipped());
-        if(isSold){
-            informationService.inform(buyerInfo.getUser());
-            sellsRepository.createSells(buyerInfo.getUser(), buyerInfo.getNameOfProduct(),
-                    buyerInfo.getQuantity(), buyerInfo.getWhenSold(), buyerInfo.getWhenGotMoney(),
-                    buyerInfo.getWhenShipped());
-            return new SellsDTO(buyerInfo.getUser(), true);
+    public OrderDTO process(final BuyerInfo buyerInfo) {
+        boolean ifSold = sellsService.createSells(buyerInfo);
+        if(ifSold){
+            informationService.inform(buyerInfo);
+            sellsRepository.createOrderRepository(buyerInfo);
+            return new OrderDTO(buyerInfo, true);
         } else {
-            return new SellsDTO(buyerInfo.getUser(), false);
+            return new OrderDTO(buyerInfo, false);
         }
     }
 }
