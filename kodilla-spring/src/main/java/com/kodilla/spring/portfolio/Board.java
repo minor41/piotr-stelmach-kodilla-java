@@ -14,15 +14,15 @@ public class Board {
         this.doneList = doneList;
     }
 
-   public void addTaskToDoList(){
-        System.out.println("Adding new task: " + toDoList);
+   public void addTaskToDoList(String toDo){
+        System.out.println("Adding new task: " + toDo);
    }
 
-   public void addTaskInProgressList() {
-       System.out.println("Adding new task: " + inProgressList);
+   public void addTaskInProgressList(String progressList) {
+       System.out.println("Adding new task: " + progressList);
    }
 
-   public void addTaskDoneList(){
-       System.out.println("Adding new task: " + doneList);
+   public void addTaskDoneList(String finished){
+       System.out.println("Adding new task: " + finished);
    }
 }
