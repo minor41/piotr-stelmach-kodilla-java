@@ -15,8 +15,10 @@ public class BoardConfig {
     @Autowired
     @Qualifier("task list1")
     TaskList toDoList;
+    @Autowired
     @Qualifier("task list2")
     TaskList inProgressList;
+    @Autowired
     @Qualifier("task list3")
     TaskList doneList;
 
@@ -32,7 +34,7 @@ public class BoardConfig {
         return new TaskList(new ArrayList<>());
     }
 
-    @Bean(name = " task list2")
+    @Bean(name = "task list2")
     @Scope("prototype")
     public TaskList getTaskList2(){
         return  new TaskList(new ArrayList<>());
