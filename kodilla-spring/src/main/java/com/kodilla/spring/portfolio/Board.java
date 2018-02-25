@@ -15,17 +15,14 @@ public class Board {
 
    public void addTaskToDoList(final List<String> toDo){
         toDo.add("task 1");
-        toDo.add("task 4");
         System.out.println("Adding new task: " + toDo);
    }
 
    public void addTaskInProgressList(final List<String> progressList) {
-        progressList.add("task 3");
-       System.out.println("Adding new task: " + progressList);
+       System.out.println("Adding new task: " + progressList.add("task 000"));
    }
 
    public void addTaskDoneList(final List<String> finished){
-        finished.add("task 3");
        System.out.println("Adding new task: " + finished);
    }
 }
