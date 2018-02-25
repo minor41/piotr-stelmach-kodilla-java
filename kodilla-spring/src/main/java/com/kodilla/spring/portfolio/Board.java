@@ -1,5 +1,7 @@
 package com.kodilla.spring.portfolio;
 
+import java.util.List;
+
 public class Board {
     private final TaskList toDoList;
     private final TaskList inProgressList;
@@ -11,15 +13,19 @@ public class Board {
         this.doneList = doneList;
     }
 
-   public void addTaskToDoList(final String toDo){
+   public void addTaskToDoList(final List<String> toDo){
+        toDo.add("task 1");
+        toDo.add("task 4");
         System.out.println("Adding new task: " + toDo);
    }
 
-   public void addTaskInProgressList(final String progressList) {
+   public void addTaskInProgressList(final List<String> progressList) {
+        progressList.add("task 3");
        System.out.println("Adding new task: " + progressList);
    }
 
-   public void addTaskDoneList(final String finished){
+   public void addTaskDoneList(final List<String> finished){
+        finished.add("task 3");
        System.out.println("Adding new task: " + finished);
    }
 }
