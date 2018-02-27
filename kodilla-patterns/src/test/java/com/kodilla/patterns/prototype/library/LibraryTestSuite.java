@@ -40,11 +40,11 @@ public class LibraryTestSuite {
 
         //When
         Set<Book> publicLibrary = library.getBooks();
-
-        //Then
         System.out.println(library);
         System.out.println(clonedLibrary);
         System.out.println(deepClonedLibrary);
+
+        //Then
         Assert.assertEquals(clonedLibrary.getBooks(), publicLibrary);
         Assert.assertNotEquals(deepClonedLibrary.getBooks(), publicLibrary);
 
