@@ -13,4 +13,9 @@ public class TaskList {
     public void addTasks(String newTask){
         tasks.add(newTask);
     }
+
+    @Override
+    public String toString() {
+        return "" + tasks + "\n";
+    }
 }

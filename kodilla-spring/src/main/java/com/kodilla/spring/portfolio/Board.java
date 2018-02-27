@@ -17,6 +17,7 @@ public class Board {
    public void addTaskToDoList(final String toDo){
             toDoList.addTasks(toDo);
        System.out.println("Adding new task: " + toDo);
+
    }
 
    public void addTaskInProgressList(final String progressList) {
@@ -28,4 +29,24 @@ public class Board {
         doneList.addTasks(finished);
        System.out.println("Adding new task: " + finished);
    }
+
+   public TaskList getToDoListList(){
+        return toDoList;
+   }
+
+    public TaskList getInProgressList() {
+        return inProgressList;
+    }
+
+    public TaskList getDoneList() {
+        return doneList;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "toDoList = " + toDoList
+        + "progressList = " +inProgressList
+                + "finished = " + doneList;
+    }
 }
