@@ -1,8 +1,10 @@
 package com.kodilla.patterns.prototype.library;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 public class LibraryTestSuite {
     @Test
@@ -36,10 +38,15 @@ public class LibraryTestSuite {
             System.out.println(e);
         }
 
-        //When & Then
+        //When
+        Set<Book> publicLibrary = library.getBooks();
+
+        //Then
         System.out.println(library);
         System.out.println(clonedLibrary);
         System.out.println(deepClonedLibrary);
+        Assert.assertEquals(clonedLibrary.getBooks(), publicLibrary);
+        Assert.assertNotEquals(deepClonedLibrary.getBooks(), publicLibrary);
 
     }
 }
