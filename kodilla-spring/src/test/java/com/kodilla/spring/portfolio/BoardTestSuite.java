@@ -12,6 +12,7 @@ public class BoardTestSuite {
         Board board = context.getBean(Board.class);
         //When & Then
         board.addTaskToDoList("task1");
+        board.addTaskToDoList("hello");
         board.addTaskInProgressList("task 3333");
         board.addTaskDoneList("task 999");
     }
