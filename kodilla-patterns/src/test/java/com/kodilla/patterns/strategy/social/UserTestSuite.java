@@ -40,6 +40,5 @@ public class UserTestSuite {
 
         //Then
         Assert.assertEquals("Snapchat", robShare);
-
     }
 }
