@@ -13,6 +13,8 @@ public class ShoppingTask implements Task{
 
     @Override
     public void executeTask() {
+        System.out.println("Task: " + taskName + " want to buy " + whatToBuy +
+        " need " + quantity);
 
     }
 
@@ -23,6 +25,7 @@ public class ShoppingTask implements Task{
 
     @Override
     public boolean isTaskExecuted() {
-        return false;
+         new ShoppingTask("Shopping in the Mall", "shoes", 1).executeTask();
+            return true;
     }
 }

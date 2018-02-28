@@ -13,7 +13,8 @@ public class PaintingTask implements Task{
 
     @Override
     public void executeTask() {
-
+        System.out.println("Task: " + taskName + " color " + color +
+        " what to paint " + whatToPaint);
     }
 
     @Override
@@ -23,6 +24,7 @@ public class PaintingTask implements Task{
 
     @Override
     public boolean isTaskExecuted() {
-        return false;
+        new PaintingTask("Paint the house", "blue", "Outside walls").executeTask();
+        return true;
     }
 }

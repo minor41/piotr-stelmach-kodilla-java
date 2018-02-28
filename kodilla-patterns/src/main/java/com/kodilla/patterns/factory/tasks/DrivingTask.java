@@ -13,7 +13,7 @@ public class DrivingTask implements Task{
 
     @Override
     public void executeTask() {
-
+        System.out.println("task: " + taskName + " where " + where + " by " + using);
     }
 
     @Override
@@ -23,6 +23,7 @@ public class DrivingTask implements Task{
 
     @Override
     public boolean isTaskExecuted() {
-        return false;
+        new DrivingTask("Driving", "work", "car").executeTask();
+        return true;
     }
 }
