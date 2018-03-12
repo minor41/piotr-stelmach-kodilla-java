@@ -1,4 +1,4 @@
-package com.kodilla.hibernate.taskList.dao;
+package com.kodilla.hibernate.tasklist.dao;
 
 import com.kodilla.hibernate.taskList.TaskList;
 import org.springframework.data.repository.CrudRepository;
