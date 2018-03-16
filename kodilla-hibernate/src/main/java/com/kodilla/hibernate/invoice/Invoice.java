@@ -15,15 +15,14 @@ public class Invoice {
     public Invoice() {
     }
 
-    public Invoice(int id, String number) {
-        this.id = id;
+    public Invoice(String number) {
         this.number = number;
     }
 
     @Id
     @GeneratedValue
     @NotNull
-    @Column(name = "INVOICE_ID", unique = true)
+    @Column(name = "Id", unique = true)
     public int getId() {
         return id;
     }
@@ -44,11 +43,10 @@ public class Invoice {
 
     @OneToMany(
             targetEntity = Item.class,
-            mappedBy = "ITEM",
+            mappedBy = "invoice",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
-    @JoinColumn(name = "ITEM")
     public List<Item> getItems() {
         return items;
     }
