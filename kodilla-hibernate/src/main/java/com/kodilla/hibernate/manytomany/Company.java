@@ -5,6 +5,13 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedNativeQuery(
+        name = "Company.retriveCompanyName",
+        query = "SELECT * FROM COMPANIES" +
+                " WHERE MID(COMPANY_NAME, 1, 3) = :FIRSTTHREECHARACTERS",
+        resultClass = Company.class
+)
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
@@ -37,7 +44,7 @@ public class Company {
         this.id = id;
     }
 
-    private void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
