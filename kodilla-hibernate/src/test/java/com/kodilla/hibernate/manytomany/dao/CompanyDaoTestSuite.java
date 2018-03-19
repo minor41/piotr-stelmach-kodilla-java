@@ -110,7 +110,5 @@ public class CompanyDaoTestSuite {
             employeeDao.delete(stephanieClarckson);
             employeeDao.delete(lindaKovalsky);
         }
-
-
     }
 }
