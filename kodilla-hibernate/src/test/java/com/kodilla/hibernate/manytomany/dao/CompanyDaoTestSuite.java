@@ -94,11 +94,23 @@ public class CompanyDaoTestSuite {
         //When
         List<Employee> name1 = employeeDao.retrieveLastName("Smith");
         int findName = name1.size();
-        List<Company> companyList = companyDao.retrieveCompanyName("Gre");
+        List<Company> companyList = companyDao.retrieveCompanyName("Dat");
         int findCompany = companyList.size();
 
         //Then
-        Assert.assertEquals(1, findName);
-        Assert.assertEquals(1, findCompany);
+        try {
+            Assert.assertEquals(1, findName);
+            Assert.assertEquals(1, findCompany);
+        }finally {
+            //Clean up
+            companyDao.delete(softwareMachine);
+            companyDao.delete(dataMasters);
+            companyDao.delete(greyMatter);
+            employeeDao.delete(johnSmith);
+            employeeDao.delete(stephanieClarckson);
+            employeeDao.delete(lindaKovalsky);
+        }
+
+
     }
 }
