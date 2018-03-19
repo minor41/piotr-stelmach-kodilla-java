@@ -8,7 +8,7 @@ import java.util.List;
 @NamedNativeQuery(
         name = "Company.retriveCompanyName",
         query = "SELECT * FROM COMPANIES" +
-                " WHERE MID(COMPANY_NAME, 1, 3) = :FIRSTTHREECHARACTERS",
+                " WHERE MID(COMPANY_NAME, 1, 3) = :THREECHARACTERS",
         resultClass = Company.class
 )
 
