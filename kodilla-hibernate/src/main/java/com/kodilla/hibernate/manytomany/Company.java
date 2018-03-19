@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedNativeQuery(
-        name = "Company.retriveCompanyName",
+        name = "Company.retrieveCompanyName",
         query = "SELECT * FROM COMPANIES" +
                 " WHERE MID(COMPANY_NAME, 1, 3) = :THREECHARACTERS",
         resultClass = Company.class
