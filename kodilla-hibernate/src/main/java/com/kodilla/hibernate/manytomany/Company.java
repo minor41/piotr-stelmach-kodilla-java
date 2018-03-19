@@ -7,13 +7,13 @@ import java.util.List;
 
 @NamedNativeQuery(
         name = "Company.retrieveCompanyName",
-        query = "SELECT * FROM COMPANIES" +
+        query = "SELECT * FROM companies" +
                 " WHERE MID(COMPANY_NAME, 1, 3) = :THREECHARACTERS",
         resultClass = Company.class
 )
 
 @Entity
-@Table(name = "COMPANIES")
+@Table(name = "companies")
 public class Company {
     private int id;
     private String name;
