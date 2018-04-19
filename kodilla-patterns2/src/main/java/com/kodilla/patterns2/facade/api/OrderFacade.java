@@ -45,7 +45,7 @@ public class OrderFacade {
             if (!shopService.submitOrder(orderId)) {
                 LOGGER.error(OrderProcessingException.ERR_SUBMITTING_ERROR);
                 wasError = true;
-                throw  new OrderProcessingException(OrderProcessingException.ERR_SUBMITTING_ERROR)
+                throw  new OrderProcessingException(OrderProcessingException.ERR_SUBMITTING_ERROR);
             }
             LOGGER.info("Order " + orderId + "submitted");
         }finally {
