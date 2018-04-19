@@ -19,18 +19,4 @@ public class Airports {
         return arrivalAirport;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Airports airports = (Airports) o;
-        return Objects.equals(departureAirport, airports.departureAirport) &&
-                Objects.equals(arrivalAirport, airports.arrivalAirport);
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(departureAirport, arrivalAirport);
-    }
 }
