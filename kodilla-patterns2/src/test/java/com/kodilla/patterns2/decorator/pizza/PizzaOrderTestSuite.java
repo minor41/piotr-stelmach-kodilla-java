@@ -81,6 +81,4 @@ public class PizzaOrderTestSuite {
         assertEquals("Crust, tomato sauce, cheese, ham, bacon, beef, pepperoni," +
                 " sausage, extra cheese + thick crust", description);
     }
-    @Test
-    public void test
 }
