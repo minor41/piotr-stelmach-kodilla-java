@@ -5,11 +5,16 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @NamedNativeQuery(
         name = "Company.retrieveCompanyName",
         query = "SELECT * FROM companies" +
                 " WHERE MID(COMPANY_NAME, 1, 3) = :THREECHARACTERS",
         resultClass = Company.class
+)
+@NamedQuery(
+        name = "Company.retrieveCompaniesWithNamesPart",
+        query = "FROM Company WHERE name like concat('%',:NAME_PART,'%')"
 )
 
 @Entity
