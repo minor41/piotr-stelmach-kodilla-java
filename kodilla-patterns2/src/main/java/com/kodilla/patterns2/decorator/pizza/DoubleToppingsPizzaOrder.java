@@ -15,6 +15,6 @@ public class DoubleToppingsPizzaOrder extends AbstractPizzaOrderDecorator {
 
     @Override
     public String getDescription() {
-        return super.getDescription() + ", double every topping";
+        return super.getDescription() + " + double every topping";
     }
 }

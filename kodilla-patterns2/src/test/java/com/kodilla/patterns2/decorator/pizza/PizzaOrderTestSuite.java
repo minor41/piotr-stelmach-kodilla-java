@@ -81,4 +81,29 @@ public class PizzaOrderTestSuite {
         assertEquals("Crust, tomato sauce, cheese, ham, bacon, beef, pepperoni," +
                 " sausage, extra cheese + thick crust", description);
     }
+    @Test
+    public void testGreekPizzaDoubleToppingsOrderGetCost(){
+        //Given
+        PizzaOrder theOrder = new BasicPizzaOrder();
+        theOrder = new GreekPizzaOrderDecorator(theOrder);
+        theOrder = new DoubleToppingsPizzaOrder(theOrder);
+        //When
+        BigDecimal cost = theOrder.getCost();
+        System.out.println(cost);
+        //Then
+        assertEquals(new BigDecimal(37), cost);
+    }
+    @Test
+    public void testGreekPizzaDoubleToppingsOrderGetDescription(){
+        //Given
+        PizzaOrder theOrder = new BasicPizzaOrder();
+        theOrder = new GreekPizzaOrderDecorator(theOrder);
+        theOrder = new DoubleToppingsPizzaOrder(theOrder);
+        //When
+        String description = theOrder.getDescription();
+        System.out.println(description);
+        //Then
+        assertEquals("Crust, tomato sauce, cheese, black olives, feta, tomatoes," +
+                " onions + double every topping", description);
+    }
 }
