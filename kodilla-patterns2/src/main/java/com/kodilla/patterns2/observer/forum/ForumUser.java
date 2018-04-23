@@ -10,7 +10,7 @@ public class ForumUser implements Observer {
 
     @Override
     public void update(ForumTopic forumTopic) {
-        System.out.println(username + ": New messages in Topic" + forumTopic.getName() + "\n" +
+        System.out.println(username + ": New messages in Topic: " + forumTopic.getName() + "\n" +
         " (total: " + forumTopic.getMessage().size() + " messages)");
         updateCount++;
     }
