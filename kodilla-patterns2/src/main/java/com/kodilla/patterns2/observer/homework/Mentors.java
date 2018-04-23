@@ -11,7 +11,7 @@ public class Mentors implements Observer {
     @Override
     public void update(TaskQueue taskQueue) {
         System.out.println(mentorName + ": You've got new task to check for: " + taskQueue.getNameOfStudent() + "\n" +
-                "You have: " + taskQueue.getGithubLinks().size() + " tasks to check");
+                "You have: " + taskQueue.getTasks().size() + " tasks to check");
         checkedTasks++;
     }
 

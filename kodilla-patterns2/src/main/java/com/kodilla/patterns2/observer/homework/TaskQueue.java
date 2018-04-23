@@ -7,17 +7,17 @@ import java.util.List;
 
 public class TaskQueue implements Observable {
     private final List<Observer> observers;
-    private final Deque<String> githubLinks;
+    private final Deque<String> tasks;
     private final String nameOfStudent;
 
     public TaskQueue(String nameOfStudent) {
         observers = new ArrayList<>();
-        githubLinks = new ArrayDeque<>();
+        tasks = new ArrayDeque<>();
         this.nameOfStudent = nameOfStudent;
     }
 
     public void addTask(String newTask) {
-        githubLinks.add(newTask);
+        tasks.add(newTask);
         notifyObservers();
     }
 
@@ -38,8 +38,8 @@ public class TaskQueue implements Observable {
         observers.remove(observer);
     }
 
-    public Deque<String> getGithubLinks() {
-        return githubLinks;
+    public Deque<String> getTasks() {
+        return tasks;
     }
 
     public String getNameOfStudent() {
