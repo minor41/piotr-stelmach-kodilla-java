@@ -1,16 +1,14 @@
 package com.kodilla.good.patterns.com.challeges.airports;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class FlightProcessor {
 
     ConnectionsDB connectionsDB;
 
-    public List<Flight> flightTo(String destination) {
+    public List<Flight> flightTo(String destination) throws RouteNotFoundException {
         final List<Flight> finalAirport;
 
         finalAirport = connectionsDB.getConnection().stream()
@@ -22,12 +20,12 @@ public class FlightProcessor {
             finalAirport.stream()
                     .forEach(System.out::println);
         } else {
-            System.out.println("\nNo flights found for requested connection \n");
+            throw new RouteNotFoundException();
         }
         return new ArrayList<>(finalAirport);
     }
 
-    public List<Flight> flightFrom(String from) {
+    public List<Flight> flightFrom(String from) throws RouteNotFoundException {
         final List<Flight> startingAirport;
 
         startingAirport = connectionsDB.getConnection().stream()
@@ -39,12 +37,12 @@ public class FlightProcessor {
             startingAirport.stream()
                     .forEach(System.out::println);
         } else {
-            System.out.println("\nNo flights found for requested connection \n");
+            throw new RouteNotFoundException();
         }
         return new ArrayList<>(startingAirport);
     }
 
-    public List<Flight> layoverFlights(String from, String destination, String via) {
+    public List<Flight> layoverFlights(String from, String destination, String via) throws RouteNotFoundException {
         final List<Flight> layoverAirport;
         final List<Flight> finalAirport;
 
@@ -59,12 +57,12 @@ public class FlightProcessor {
 
         layoverAirport.addAll(finalAirport);
 
-        if (layoverAirport != null && finalAirport != null && layoverAirport.size() > 0 && finalAirport.size() > 0) {
-            System.out.println("\nAll flights to: " + destination + " via: " + via + "\n");
+        if (layoverAirport.size() > 0 && finalAirport.size() > 0) {
+            System.out.println("\nAll flights to: " + destination + " via: " + via);
             layoverAirport.stream()
                     .forEach(System.out::println);
         } else {
-            System.out.println("\nNo flights found for requested connection \n");
+            throw new RouteNotFoundException();
         }
         return new ArrayList<>(layoverAirport);
     }
