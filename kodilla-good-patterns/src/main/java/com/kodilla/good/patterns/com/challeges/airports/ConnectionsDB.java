@@ -30,7 +30,7 @@ public class ConnectionsDB {
         everydayConnections.add(new Flight("AA9", "Moscow", "London", LocalDate.now(),
                 LocalTime.of(10, 00), LocalTime.of(12, 00)));
         everydayConnections.add(new Flight("AA10", "Rome", "London", LocalDate.now(),
-                LocalTime.of(10, 00), LocalTime.of(12, 00)));
+                LocalTime.of(16, 00), LocalTime.of(18, 00)));
 
         return new ArrayList<>(everydayConnections);
     }

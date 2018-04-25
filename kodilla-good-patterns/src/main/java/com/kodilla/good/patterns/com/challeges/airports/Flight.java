@@ -5,12 +5,12 @@ import java.time.LocalTime;
 import java.util.Objects;
 
 public class Flight {
-    private final String flightNumber;
-    private final String departureAirport;
-    private final String arrivalAirport;
-    private final LocalDate dateOfFlight;
-    private final LocalTime departureTime;
-    private final LocalTime arrivalTime;
+    final String flightNumber;
+    final String departureAirport;
+    final String arrivalAirport;
+    final LocalDate dateOfFlight;
+    final LocalTime departureTime;
+    final LocalTime arrivalTime;
 
     public Flight(String flightNumber, String departureAirport, String arrivalAirport, LocalDate dateOfFlight, LocalTime departureTime, LocalTime arrivalTime) {
         this.flightNumber = flightNumber;
