@@ -29,7 +29,7 @@ public class TaskQueueTestSuite {
 
         //Then
         assertEquals(4, mentor1.getCheckedTasks());
-        assertEquals(7, mentor2.getCheckedTasks());
+        assertEquals(3, mentor2.getCheckedTasks());
 
     }
 
